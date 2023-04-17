@@ -1,4 +1,5 @@
 const { gql } = require("apollo-server-express");
+const { User } = require("../models/User.js");
 
 const typeDefs = gql`
   type Book {
@@ -78,6 +79,7 @@ const resolvers = {
     },
 
     addUser: async (parent, { username, email, password }) => {
+      console.log(User.find());
       const user = await User.create({ username, email, password });
       const token = signToken(user);
 
