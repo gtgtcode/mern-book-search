@@ -32,4 +32,4 @@ This application was built using the following technologies:
 
 # Screenshot
 
-![image](../assets/screenshot.png)
+![image](./assets/screenshot.png)
